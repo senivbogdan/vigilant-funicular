@@ -11,27 +11,32 @@ const Form = () => {
     }
 
     return (
-        <div className="form-div">
+        <div className="wrapper-second">
+            <div className="form-div">
+                <form
+                    className="form"
+                    action={"/path"}
+                    method={"post"}>
+                        {emailInput.map((i, index) => {
+                        return <Input
+                            setEmailInput={setEmailInput}
+                            emailInput={emailInput}
+                            key={i.id}
+                            id={i.id}/>
+                    })}
+                </form>
+            </div>
             <div className="button-div">
                 <button
                     className="add-button"
                     onClick={() => addField()}
-                   >
+                >
                     ADD FIELD
                 </button>
                 <input
                     className="submit-button"
                     type="submit"/>
             </div>
-            <form action={"/path"} method={"post"}>
-                {emailInput.map((i, index) => {
-                    return <Input
-                        setEmailInput={setEmailInput}
-                        emailInput={emailInput}
-                        key={i.id}
-                        id={i.id}/>
-                })}
-            </form>
         </div>
     );
 };

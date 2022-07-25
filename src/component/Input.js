@@ -17,7 +17,7 @@ const Input = ({ setEmailInput, emailInput, id }) => {
     }
 
     return (
-        <div className={"wrapper"}>
+        <div className={"wrapper-second"}>
                 <input
                     className="input-text"
                     type={"text"}
