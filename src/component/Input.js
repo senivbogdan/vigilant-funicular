@@ -28,7 +28,7 @@ const Input = ({ setEmailInput, emailInput, id }) => {
                     className="delete-button"
                     onClick={() => removeField(id)}
                   >
-                    DELETE FIELD
+                    X
                 </button>
             {!valid && <ErrorComp/>}
         </div>
