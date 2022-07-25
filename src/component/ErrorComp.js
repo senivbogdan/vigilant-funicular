@@ -2,7 +2,7 @@ import React from 'react';
 
 const ErrorComp = () => {
     return (
-            <p className={"error"}>Поле непроходит валидацию</p>
+            <p className="error">Поле непроходит валидацию</p>
     );
 };
 

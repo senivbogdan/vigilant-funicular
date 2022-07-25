@@ -1,7 +1,7 @@
 .App {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 20% 20%
+  grid-template-columns: 20% 20% 20% 20% 20%
 }
 
 .form-div {
@@ -9,10 +9,10 @@
   grid-column-end: 4;
 }
 
-.button-div {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
+/*.button-div {*/
+/*  grid-column-start: 3;*/
+/*  grid-column-end: 4;*/
+/*}*/
 
 .error {
   color: red;
