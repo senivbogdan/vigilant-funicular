@@ -16,7 +16,6 @@ export const Input = ({ removeField, id }) => {
         <div className={"wrapper-second"}>
                 <input
                     className="input-text"
-                    type={"text"}
                     value={value}
                     onChange={event => handleInput(event)}
                 />

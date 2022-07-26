@@ -27,18 +27,20 @@ export const Form = () => {
                             id={i.id}/>
                     )
                         }
+                    <div className="button-form">
+                        <input
+                            className="submit-button"
+                            type="submit"/>
+                    </div>
                 </form>
-            </div>
-            <div className="button-div">
-                <button
-                    className="add-button"
-                    onClick={() => addField()}
-                >
-                    ADD FIELD
-                </button>
-                <input
-                    className="submit-button"
-                    type="submit"/>
+                <div className="button-div">
+                    <button
+                        className="add-button"
+                        onClick={() => addField()}
+                    >
+                        ADD FIELD
+                    </button>
+                </div>
             </div>
         </div>
     );
