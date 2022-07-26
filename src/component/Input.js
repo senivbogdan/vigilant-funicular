@@ -17,7 +17,7 @@ export const Input = ({ removeField, id }) => {
                 <input
                     className="input-text"
                     value={value}
-                    onChange={event => handleInput(event)}
+                    onChange={handleInput}
                 />
                 <button
                     className="delete-button"
