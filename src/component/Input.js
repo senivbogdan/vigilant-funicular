@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ErrorComp } from "./ErrorComp";
+import { ErrorMessage } from "./ErrorMessage";
 
 export const Input = ({ removeField, id }) => {
     const [value, setValue] = useState("")
@@ -25,7 +25,7 @@ export const Input = ({ removeField, id }) => {
                   >
                     X
                 </button>
-                <ErrorComp valid={valid}/>
+                <ErrorMessage valid={valid}/>
         </div>
 
     );
