@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { ErrorMessage } from "./ErrorMessage";
 
-export const Input = ({ removeField, id }) => {
+const Input = ({ removeField, id }) => {
     const [value, setValue] = useState("")
-    const [valid, setValid] = useState(true)
+    const [isValid, setIsValid] = useState(true)
 
     const handleInput = (e) => {
         setValue(e.target.value)
         const reg = /^\S+@\S+$/i
 
-        return reg.test(e.target.value) ? setValid(true) : setValid(false)
+        return reg.test(e.target.value) ? setIsValid(true) : setIsValid(false)
     }
 
     return (
@@ -25,9 +24,11 @@ export const Input = ({ removeField, id }) => {
                   >
                     X
                 </button>
-                <ErrorMessage valid={valid}/>
+                <p className={isValid ? "hidden" : "error"}>Поле непроходит валидацию</p>
         </div>
 
     );
 };
+
+export default Input
 

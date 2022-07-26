@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Input } from "./Input";
+import Input from "./Input";
 import "../App.css"
 
 export const Form = () => {
     const [emailInput, setEmailInput] = useState([])
+
     const addField = () => {
         setEmailInput([...emailInput, {
             id: Date.now()
@@ -11,7 +12,7 @@ export const Form = () => {
     }
 
     const removeField = (id) => {
-        setEmailInput(emailInput.filter(i => i.id !== id))
+        setEmailInput(prev => prev.filter(i => i.id !== id))
     }
 
     return (
@@ -36,7 +37,7 @@ export const Form = () => {
                 <div className="button-div">
                     <button
                         className="add-button"
-                        onClick={() => addField()}
+                        onClick={addField}
                     >
                         ADD FIELD
                     </button>
