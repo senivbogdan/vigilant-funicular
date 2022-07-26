@@ -1,9 +1,6 @@
 import React from "react";
+import "../App.css"
 
-const ErrorComp = () => {
-    return (
-            <p className="error">Поле непроходит валидацию</p>
-    );
-};
+export const ErrorComp = ({ valid }) => <p className={valid ? "hidden" : "error"}>Поле непроходит валидацию</p>;
 
-export default ErrorComp;
+

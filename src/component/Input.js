@@ -1,7 +1,7 @@
-import React, {useState} from "react";
-import ErrorComp from "./ErrorComp";
+import React, { useState } from "react";
+import { ErrorComp } from "./ErrorComp";
 
-const Input = ({ setEmailInput, emailInput, id }) => {
+export const Input = ({ removeField, id }) => {
     const [value, setValue] = useState("")
     const [valid, setValid] = useState(true)
 
@@ -10,10 +10,6 @@ const Input = ({ setEmailInput, emailInput, id }) => {
         const reg = /^\S+@\S+$/i
 
         return reg.test(e.target.value) ? setValid(true) : setValid(false)
-    }
-
-    const removeField = (id) => {
-        setEmailInput(emailInput.filter(i => i.id !== id))
     }
 
     return (
@@ -30,10 +26,9 @@ const Input = ({ setEmailInput, emailInput, id }) => {
                   >
                     X
                 </button>
-            {!valid && <ErrorComp/>}
+                <ErrorComp valid={valid}/>
         </div>
 
     );
 };
 
-export default Input;

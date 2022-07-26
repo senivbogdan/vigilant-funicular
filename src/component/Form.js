@@ -1,13 +1,17 @@
-import React, {useState} from "react";
-import Input from "./Input";
+import React, { useState } from "react";
+import { Input } from "./Input";
 import "../App.css"
 
-const Form = () => {
+export const Form = () => {
     const [emailInput, setEmailInput] = useState([])
     const addField = () => {
         setEmailInput([...emailInput, {
             id: Date.now()
         }])
+    }
+
+    const removeField = (id) => {
+        setEmailInput(emailInput.filter(i => i.id !== id))
     }
 
     return (
@@ -17,13 +21,12 @@ const Form = () => {
                     className="form"
                     action={"/path"}
                     method={"post"}>
-                        {emailInput.map((i, index) => {
-                        return <Input
-                            setEmailInput={setEmailInput}
-                            emailInput={emailInput}
+                        {emailInput.map(i => <Input
+                            removeField={removeField}
                             key={i.id}
                             id={i.id}/>
-                    })}
+                    )
+                        }
                 </form>
             </div>
             <div className="button-div">
@@ -41,4 +44,3 @@ const Form = () => {
     );
 };
 
-export default Form;

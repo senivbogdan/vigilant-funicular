@@ -43,7 +43,12 @@
 }
 
 .error {
+  opacity: 1;
   color: red;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .input-text {

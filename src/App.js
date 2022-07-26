@@ -1,13 +1,5 @@
 import "./App.css";
-import Form from "./component/Form";
+import { Form } from "./component/Form";
 
-function App() {
+export const App = () => <Form/>
 
-  return (
-    <div className="App">
-        <Form/>
-    </div>
-  );
-}
-
-export default App;
