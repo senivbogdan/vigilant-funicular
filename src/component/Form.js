@@ -20,7 +20,9 @@ export const Form = () => {
             <div className="form-div">
                 <form
                     className="form"
-                        >
+                    action="#"
+                    method="post"
+                    >
                     <div className="button-form">
                         <input
                             className="submit-button"
@@ -28,8 +30,7 @@ export const Form = () => {
                         <button
                             className="add-button"
                             onClick={addField}
-                            type="button"
-                        >
+                            type="button">
                             ADD FIELD
                         </button>
                     </div>
@@ -38,11 +39,9 @@ export const Form = () => {
                                 removeField={removeField}
                                 key={i.id}
                                 id={i.id}/>
-                            )
-                            }
+                            )}
                         </div>
                 </form>
-
             </div>
         </div>
     );

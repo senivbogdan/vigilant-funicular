@@ -8,7 +8,7 @@ const Input = ({ removeField, id }) => {
         setValue(e.target.value)
         const reg = /^\S+@\S+$/i
 
-        return reg.test(e.target.value) ? setIsValid(true) : setIsValid(false)
+        setIsValid(reg.test(e.target.value))
     }
 
     return (
