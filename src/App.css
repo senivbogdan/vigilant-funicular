@@ -3,54 +3,45 @@
   margin: 0 auto;
 }
 
-.button-div {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
 .button-form {
-  display: grid;
-  grid-template-columns: repeat(6, 2fr);
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
-.wap {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5px;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .form {
+  margin-top: 50px;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
 }
 
-.wrapper {
+.wrapper-inputs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-start: 1;
+  grid-column-end: 4;
+
 }
 
-@media screen and (max-width: 600px) {
-  .form {
-    display: grid;
+.wrapper {
+  grid-template-columns: 200px 1fr 1fr 1fr;
+}
+
+.inputs {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+@media screen and (max-width: 685px) {
+  .wrapper-inputs {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
   }
 }
 
-@media screen and (max-width: 415px) {
-  .form {
+@media screen and (max-width: 465px) {
+  .wrapper-inputs {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5px;
@@ -62,6 +53,10 @@
   color: red;
 }
 
+.input-div {
+  display: block;
+}
+
 .hidden {
   opacity: 0;
 }
@@ -71,13 +66,15 @@
 }
 
 .submit-button {
-  margin-left: 125px;
   border: none;
   background: green;
   color: white;
+  width: 100px;
+  height: 42px;
   font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
+  margin-right: 20px;
 }
 
 .add-button {
@@ -85,6 +82,7 @@
   border: none;
   background: aquamarine;
   font-size: 18px;
+  height: 42px;
   cursor: pointer;
   border-radius: 5px;
 }

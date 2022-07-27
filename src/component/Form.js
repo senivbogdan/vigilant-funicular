@@ -20,28 +20,29 @@ export const Form = () => {
             <div className="form-div">
                 <form
                     className="form"
-                    action={"/path"}
-                    method={"post"}>
-                        {emailInput.map(i => <Input
-                            removeField={removeField}
-                            key={i.id}
-                            id={i.id}/>
-                    )
-                        }
+                        >
                     <div className="button-form">
                         <input
                             className="submit-button"
                             type="submit"/>
+                        <button
+                            className="add-button"
+                            onClick={addField}
+                            type="button"
+                        >
+                            ADD FIELD
+                        </button>
                     </div>
+                        <div className="wrapper-inputs">
+                            {emailInput.map(i => <Input
+                                removeField={removeField}
+                                key={i.id}
+                                id={i.id}/>
+                            )
+                            }
+                        </div>
                 </form>
-                <div className="button-div">
-                    <button
-                        className="add-button"
-                        onClick={addField}
-                    >
-                        ADD FIELD
-                    </button>
-                </div>
+
             </div>
         </div>
     );

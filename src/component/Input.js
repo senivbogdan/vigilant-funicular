@@ -12,7 +12,7 @@ const Input = ({ removeField, id }) => {
     }
 
     return (
-        <div className={"wrapper-second"}>
+        <div className={"input-div"}>
                 <input
                     className="input-text"
                     value={value}
